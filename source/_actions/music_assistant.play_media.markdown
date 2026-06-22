@@ -38,6 +38,8 @@ Enqueue:
   description: Whether the content should be played now or added to the queue.
 Enable radio mode:
   description: Turns on radio mode to auto-generate a playlist based on the selection.
+Username:
+  description: Uses the specified username for the play media request. This user's playlog will be adjusted. If provider filters are configured, the specific media item selection (e.g. from which audiobook provider instance) will be taken into account as well.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -81,6 +83,8 @@ radio_mode:
   required: false
   type: boolean
   default: false
+username:
+  description: Adjust the playlog for this user. If the user has provider filters configured, the media item selection will be based on this too.
 {% endoptions_yaml %}
 
 {% include actions/targets.md domain="media_player" %}
