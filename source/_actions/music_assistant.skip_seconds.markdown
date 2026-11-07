@@ -29,7 +29,7 @@ To use this action from an automation or a script:
 Seconds:
   description: The number of seconds to skip. A negative number skips back.
 Username:
-  description: Run the action as this Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -64,7 +64,8 @@ username:
 
 ## Good to know
 
-- Running the action as a specific Music Assistant user needs a Music Assistant server newer than 2.10.
+- The player must be playing from its Music Assistant queue, and the item must have a known duration. A radio stream, for example, has none.
+- Running the action as a specific Music Assistant user requires Music Assistant server version 2.11 or later.
 
 {% include actions/try_it.md %}
 
