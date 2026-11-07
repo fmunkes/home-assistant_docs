@@ -41,7 +41,7 @@ Limit:
 Offset:
   description: The point in the list to start returning items from.
 Username:
-  description: Run the action as this Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -92,11 +92,11 @@ username:
 
 ## Response data
 
-The action returns an `items` list along with the `limit` and `offset` you requested. Each item includes its `name`, `uri`, and `media_type`, and its `position` in the album, playlist, or podcast.
+The action returns an `items` list along with the `limit` and `offset` you requested. Each item includes its `name`, `uri`, `media_type`, and `position`. The position is only set for the items of a playlist and for podcast episodes. For other items, it is `null`.
 
 ## Good to know
 
-- This action needs a Music Assistant server newer than 2.10.
+- This action requires Music Assistant server version 2.11 or later.
 
 {% include actions/stuck.md %}
 
