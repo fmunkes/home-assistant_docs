@@ -35,9 +35,9 @@ Music Assistant instance:
 Playlist name:
   description: The name of the new playlist.
 Provider:
-  description: The Music Assistant provider to create the playlist in. When omitted, the playlist is created in the Music Assistant library.
+  description: The Music Assistant provider to create the playlist in. When omitted, it is created as a Music Assistant playlist. The playlist is added to your Music Assistant library either way.
 Username:
-  description: Create the playlist as this Music Assistant user. The playlist belongs to this user.
+  description: Create the playlist as this Music Assistant user. The playlist belongs to this user. When omitted, the playlist is created as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -65,7 +65,7 @@ name:
   required: true
   type: string
 provider:
-  description: The instance ID or domain of the Music Assistant provider to create the playlist in, such as `builtin`. When omitted, the playlist is created in the Music Assistant library.
+  description: The instance ID or domain of the Music Assistant provider to create the playlist in, such as `builtin`. When omitted, it is created as a Music Assistant playlist. The playlist is added to your Music Assistant library either way.
   required: false
   type: string
 username:
@@ -80,7 +80,7 @@ The action returns the new playlist with its `name`, `uri`, and `media_type`. Yo
 
 ## Good to know
 
-- Creating a playlist as a specific Music Assistant user needs a Music Assistant server newer than 2.10.
+- Creating a playlist as a specific Music Assistant user requires Music Assistant server version 2.11 or later.
 
 {% include actions/stuck.md %}
 
