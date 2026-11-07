@@ -33,7 +33,7 @@ Source media player:
 Autoplay:
   description: When enabled, playback starts on the target player after the queue is transferred. When disabled, the queue is transferred without starting playback.
 Username:
-  description: Transfer the queue as this Music Assistant user. The queue is only transferred when this user may access both players.
+  description: Transfer the queue as this Music Assistant user. The transfer fails when this user may not access both players. When omitted, the queue is transferred as the account Home Assistant is connected with.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -64,7 +64,7 @@ auto_play:
   type: boolean
   default: false
 username:
-  description: Transfer the queue as this Music Assistant user. The queue is only transferred when this user may access both players. Needs a Music Assistant server newer than 2.10.
+  description: Transfer the queue as this Music Assistant user. The transfer fails when this user may not access both players. When omitted, the queue is transferred as the account Home Assistant is connected with. Requires Music Assistant server version 2.11 or later.
   required: false
   type: string
 {% endoptions_yaml %}
