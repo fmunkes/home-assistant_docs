@@ -35,7 +35,7 @@ Music Assistant instance:
 Track URI:
   description: The URI of the track.
 Username:
-  description: Run the action as this Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -74,7 +74,7 @@ The action returns the plain `lyrics` and the synced `lrc_lyrics` in LRC format.
 
 ## Good to know
 
-- This action needs a Music Assistant server newer than 2.10.
+- This action requires Music Assistant server version 2.11 or later.
 
 {% include actions/stuck.md %}
 
