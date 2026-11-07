@@ -35,7 +35,7 @@ Music Assistant instance:
 Media URI:
   description: The URI of the item, for example from the [Search Music Assistant](/actions/music_assistant.search/) or [Get library items](/actions/music_assistant.get_library/) actions.
 Username:
-  description: Run the action as this Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -74,7 +74,7 @@ The action returns the item with its `name`, `uri`, `media_type`, `image`, and `
 
 ## Good to know
 
-- Running the action as a specific Music Assistant user needs a Music Assistant server newer than 2.10.
+- Running the action as a specific Music Assistant user requires Music Assistant server version 2.11 or later.
 
 {% include actions/stuck.md %}
 
