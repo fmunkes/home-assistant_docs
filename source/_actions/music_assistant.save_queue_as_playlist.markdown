@@ -29,7 +29,7 @@ To use this action from an automation or a script:
 Playlist name:
   description: The name of the new playlist.
 Username:
-  description: Run the action as this Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -64,8 +64,9 @@ username:
 
 ## Good to know
 
-- This action needs a Music Assistant server newer than 2.10.
+- This action requires Music Assistant server version 2.11 or later.
 - Music Assistant creates the playlist in the background, so it can take a moment before it shows up in your library.
+- An empty queue can't be saved. Items that can't be part of a playlist are left out.
 
 {% include actions/try_it.md %}
 
