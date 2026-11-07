@@ -33,7 +33,7 @@ This action does not support targets. In the UI, you are not prompted to choose 
 Music Assistant instance:
   description: The Music Assistant instance to use.
 Username:
-  description: Run the action as this Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -68,7 +68,8 @@ The action returns a `recommendations` list. Each row has a `name` and an `items
 ## Good to know
 
 - Recommendations depend on the user: each Music Assistant user gets their own.
-- Running the action as a specific Music Assistant user needs a Music Assistant server newer than 2.10.
+- Rows that Music Assistant hides by default, such as random items, are left out.
+- This action requires Music Assistant server version 2.11 or later.
 
 {% include actions/stuck.md %}
 
