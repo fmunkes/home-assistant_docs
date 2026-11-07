@@ -32,6 +32,8 @@ Source media player:
   description: The source media player that has the queue you want to transfer. When omitted, the first playing player is used.
 Autoplay:
   description: When enabled, playback starts on the target player after the queue is transferred. When disabled, the queue is transferred without starting playback.
+Username:
+  description: Transfer the queue as this Music Assistant user. The queue is only transferred when this user may access both players.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -61,6 +63,10 @@ auto_play:
   required: false
   type: boolean
   default: false
+username:
+  description: Transfer the queue as this Music Assistant user. The queue is only transferred when this user may access both players. Needs a Music Assistant server newer than 2.10.
+  required: false
+  type: string
 {% endoptions_yaml %}
 
 {% include actions/targets.md domain="media_player" %}
