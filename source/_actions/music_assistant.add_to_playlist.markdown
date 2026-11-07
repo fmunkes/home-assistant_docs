@@ -34,7 +34,7 @@ Playlist:
 Media URI:
   description: The URI or URIs of the items to add, for example from the [Search Music Assistant](/actions/music_assistant.search/) action.
 Username:
-  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed.
+  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -91,8 +91,8 @@ script: |
 ## Good to know
 
 - Only playlists in the Music Assistant library can be changed. A playlist from a streaming provider must be added to the library first.
-- Music Assistant adds the items in the background, so it can take a moment before they show up in the playlist.
-- Editing a playlist as a specific Music Assistant user needs a Music Assistant server newer than 2.10.
+- Music Assistant adds the items in the background, so it can take a moment before they show up in the playlist. Errors while adding them, such as an item that can't be part of a playlist, are not reported back to Home Assistant.
+- Editing a playlist as a specific Music Assistant user requires Music Assistant server version 2.11 or later.
 
 {% include actions/stuck.md %}
 
