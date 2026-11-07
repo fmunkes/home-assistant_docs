@@ -8,7 +8,7 @@ related_actions:
   - music_assistant.play_media
 ---
 
-Use this action to list what an item contains: the tracks of an album or playlist, the albums or tracks of an artist, or the episodes of a podcast. The list is paged, so you can retrieve long playlists in parts.
+Use this action to list what an item contains: the tracks of an album or playlist, the albums or tracks of an artist, the episodes of a podcast, or the items of a collection, such as an audiobook series. The list is paged, so you can retrieve long playlists in parts.
 
 This action returns its result in a response variable, which you can use in later steps of the same automation or script. It does not change anything on a player.
 
@@ -33,7 +33,7 @@ This action does not support targets. In the UI, you are not prompted to choose 
 Music Assistant instance:
   description: The Music Assistant instance to use.
 Media URI:
-  description: The URI of the album, playlist, artist, or podcast.
+  description: The URI of the album, playlist, artist, podcast, or collection.
 Artist contents:
   description: For an artist, whether to return its albums or its tracks.
 Limit:
@@ -66,7 +66,7 @@ config_entry_id:
   required: true
   type: string
 media_id:
-  description: The URI of the album, playlist, artist, or podcast, such as `library://playlist/12`.
+  description: The URI of the album, playlist, artist, podcast, or collection, such as `library://playlist/12`.
   required: true
   type: string
 media_type:
