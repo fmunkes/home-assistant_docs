@@ -71,7 +71,7 @@ username:
 
 ## Good to know
 
-- An item that is playing or about to play can't be moved.
+- An item that is playing or about to play can't be moved. The action then fails.
 - Running the action as a specific Music Assistant user requires Music Assistant server version 2.11 or later.
 
 {% include actions/try_it.md %}
