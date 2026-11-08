@@ -85,7 +85,9 @@ script: |
       data:
         config_entry_id: 01JEXNDHT21V0BHJXM7A5SZANV
         playlist: "library://playlist/12"
-        media_id: "{{ queue_info['media_player.kitchen_speaker'].current_item.media_item.uri }}"
+        media_id: >-
+          {{ queue_info['media_player.kitchen_speaker']
+             .current_item.media_item.uri }}
 {% endexample %}
 
 ## Good to know
