@@ -40,6 +40,7 @@ There is currently support for the following Home Assistant Platforms:
 - [Dashboard displays](#dashboards)
 - [Button](#favorite-current-song-button)
 - [Time](#sleep-timer)
+- [Switch](#dsp)
 
 Depending on the player provider, additional platforms are supported: [Number, Select, Sensor, Switch, Text](#player-options).
 
@@ -103,6 +104,12 @@ The Music Assistant integration creates a button entity for each player to favor
 The Music Assistant integration creates a **Sleep timer** time entity for each player. Set it to the time of day when you want playback on that player to stop. If the time you set has already passed today, the sleep timer ends at that time tomorrow. When a sleep timer is active, the entity shows when it ends.
 
 The **Sleep timer** entity is disabled by default. To use it, [enable the entity](/docs/configuration/customizing-entities/#disabling-or-enabling-an-entity) first.
+
+### DSP
+
+The Music Assistant integration creates a **DSP** switch entity for each player, except for group players, which use the DSP settings of each of their members. It turns the DSP of the player on or off. Turning it off keeps the DSP settings, including the selected DSP preset, so turning it back on restores them.
+
+The **DSP** entity is disabled by default. To use it, [enable the entity](/docs/configuration/customizing-entities/#disabling-or-enabling-an-entity) first. It requires Music Assistant server version 2.11 or later. Switching the DSP needs the right to change player settings: it works when Home Assistant uses the Music Assistant app or is set up with a Music Assistant administrator account.
 
 ### Player options
 
