@@ -29,7 +29,7 @@ To use this action from an automation or a script:
 Seconds:
   description: The number of seconds to skip. A negative number skips back.
 Username:
-  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -55,7 +55,7 @@ seconds:
   required: true
   type: integer
 username:
-  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
   required: false
   type: string
 {% endoptions_yaml %}
