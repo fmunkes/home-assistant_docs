@@ -34,7 +34,7 @@ Playlist:
 Positions:
   description: The positions of the items to remove, as returned by the Get item contents action.
 Username:
-  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
+  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -68,7 +68,7 @@ positions:
   required: true
   type: [integer, list]
 username:
-  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
+  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
   required: false
   type: string
 {% endoptions_yaml %}

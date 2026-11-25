@@ -34,7 +34,7 @@ Playlist:
 Media URI:
   description: The URI or URIs of the items to add, for example from the [Search Music Assistant](/actions/music_assistant.search/) action.
 Username:
-  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
+  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -67,7 +67,7 @@ media_id:
   required: true
   type: [string, list]
 username:
-  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
+  description: Edit the playlist as this Music Assistant user. Only playlists this user may edit can be changed. When omitted, the playlist is edited as the Home Assistant user who started the action, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
   required: false
   type: string
 {% endoptions_yaml %}
