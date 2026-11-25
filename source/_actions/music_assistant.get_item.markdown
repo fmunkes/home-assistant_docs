@@ -35,7 +35,7 @@ Music Assistant instance:
 Media URI:
   description: The URI of the item, for example from the [Search Music Assistant](/actions/music_assistant.search/) or [Get library items](/actions/music_assistant.get_library/) actions.
 Username:
-  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -63,7 +63,7 @@ media_id:
   required: true
   type: string
 username:
-  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user.
+  description: Run the action as this Music Assistant user. When omitted, the action runs as the Home Assistant user who started it, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
   required: false
   type: string
 {% endoptions_yaml %}
