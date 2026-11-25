@@ -37,7 +37,7 @@ Playlist name:
 Provider:
   description: The Music Assistant provider to create the playlist in, given by its domain, such as `spotify`. If you have more than one account of that provider, use the instance ID of the provider instead. When omitted, it is created as a Music Assistant playlist. The playlist is added to your Music Assistant library either way.
 Username:
-  description: Create the playlist as this Music Assistant user. The playlist belongs to this user. When omitted, the playlist is created as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
+  description: Create the playlist as this Music Assistant user. The playlist belongs to this user. When omitted, the playlist is created as the Home Assistant user who started the action, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
 {% endoptions_ui %}
 
 {% include actions/yaml_header.md %}
@@ -69,7 +69,7 @@ provider:
   required: false
   type: string
 username:
-  description: Create the playlist as this Music Assistant user. The playlist belongs to this user. When omitted, the playlist is created as the Home Assistant user who started the action, if that user is linked to a Music Assistant user.
+  description: Create the playlist as this Music Assistant user. The playlist belongs to this user. When omitted, the playlist is created as the Home Assistant user who started the action, if that user is linked to a Music Assistant user. If there is no linked user, the action runs as the default account.
   required: false
   type: string
 {% endoptions_yaml %}
